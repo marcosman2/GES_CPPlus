@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Test.Tests" duration-ms="38056" started-at="2018-10-18T16:53:24Z" finished-at="2018-10-18T16:54:02Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="38056" started-at="2018-10-18T16:53:24Z" finished-at="2018-10-18T16:54:02Z">
+      <class name="Test.Tests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.Tests@380fb434]" name="setUp" is-config="true" duration-ms="15983" started-at="2018-10-18T16:53:24Z" finished-at="2018-10-18T16:53:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="maxAssigneeInfoState()[pri:0, instance:Test.Tests@380fb434]" name="maxAssigneeInfoState" duration-ms="22022" started-at="2018-10-18T16:53:40Z" finished-at="2018-10-18T16:54:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- maxAssigneeInfoState -->
+      </class> <!-- Test.Tests -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Test.Tests -->
+</testng-results>
