@@ -77,11 +77,10 @@ public class PageDemographic {
 		
 		driver.findElement(beginDateCalendar).sendKeys(beginDate);
 		driver.findElement(endDateCalendar).sendKeys(endDate);
-		
 	}
 	
 	
-	//Método para llenar los campos Home y Host State/Province
+	//----------------Método para llenar los campos Home y Host State/Province--------------------------
 	
 	public void minAssigneeInformationState(String homeState, String hostState)
 	{
@@ -94,22 +93,22 @@ public class PageDemographic {
 		WebElement hostSt = waitHostState.until(ExpectedConditions.elementToBeClickable(hostStateDrop));
 		hostSt.sendKeys(hostState);
 		driver.findElement(hostStateSelection).click();
-		
-		driver.findElement(nextButton).click();
-		
 	}
 	
-	//Método para adicionar dependent y esposa
+	//-----------------------Método para adicionar dependent y esposa------------------------------------
 	
 	public void minAssigneeInformationDependents(int dependents)
 	{
 		driver.findElement(dependentsField).sendKeys(String.valueOf(dependents));
-		driver.findElement(spouseCheck).click();
-		
-		driver.findElement(nextButton).click();
+		driver.findElement(spouseCheck).click();		
 	}
 	
+	//Método para hacer clic en Next
 	
+	public void demographicNext ()
+	{
+		driver.findElement(nextButton).click();
+	}
 	
 	
 }

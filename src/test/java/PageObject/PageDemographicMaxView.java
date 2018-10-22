@@ -69,6 +69,9 @@ public class PageDemographicMaxView {
 		this.hostStateSelection = By.xpath("//*[@id=\"aaagnostic\"]/tabset/div/tab[1]/accordion/accordion-group[2]/div/div[2]/div/app-assignment/form/div[1]/div[1]/div[2]/typeahead-container/ul/li[1]/a"); 
 	}
 	
+	
+	//Método para llenar los datos máximos en Assignee Demographic (País no requiere State/Province)
+	
 	public void maxAssigneeInformationNoState(String scenario, String doB, String firstName, String surname, String homeCntry, double salary, int dependents, String hostCntry, String beginDate, String endDate)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 120);
@@ -90,10 +93,10 @@ public class PageDemographicMaxView {
 		driver.findElement(hostCountrySelection).click();	
 		driver.findElement(beginDateCalendar).sendKeys(beginDate);
 		driver.findElement(endDateCalendar).sendKeys(endDate);		
-		driver.findElement(nextButton).click();
-
-		
+		driver.findElement(nextButton).click();		
 	}
+	
+	//Método para llenar los datos máximos en Assignee Demographic (País requiere State/Province)
 	
 	public void maxAssigneeInformationState(String homeState, String hostState)
 	{
@@ -101,12 +104,10 @@ public class PageDemographicMaxView {
 		WebElement homeSt = waitHomeState.until(ExpectedConditions.elementToBeClickable(homeStateDrop));
 		homeSt.sendKeys(homeState);
 		driver.findElement(homeStateSelection).click();
-		
 		WebDriverWait waitHostState = new WebDriverWait(driver, 120);
 		WebElement hostSt = waitHostState.until(ExpectedConditions.elementToBeClickable(hostStateDrop));
 		hostSt.sendKeys(hostState);
 		driver.findElement(hostStateSelection).click();
-		
 		driver.findElement(nextButton).click();
 		
 	}
