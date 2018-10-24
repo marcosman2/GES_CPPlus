@@ -1,5 +1,7 @@
 package Test;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -8,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import PageObject.PageCompensation;
@@ -16,6 +19,8 @@ import PageObject.PageDemographicMaxView;
 import PageObject.PageLogin;
 import PageObject.PagePayPolicyMinView;
 import PageObject.PageReport;
+import dataDriven.DataDrivenTest;
+import helpers.Helpers;
 
 public class Tests {
 	private WebDriver driver;
@@ -38,7 +43,7 @@ public class Tests {
 	
 	
 	//--------------Test para países que no requieren el State/Province (Projection)---------------------
-	@Test
+	/*@Test
 	public void minAssigneeInfoNoStateProjection()
 	{
 		PageDemographic pageDemo = new PageDemographic(driver);
@@ -208,6 +213,33 @@ public class Tests {
 		pagePay.worksheetClick();
 		PageCompensation pageComp = new PageCompensation(driver);
 		pageComp.calculateWorksheet();
+		PageReport pageRep = new PageReport(driver);
+		pageRep.printClick();
+	}*/
+	
+	//********************************DATA DRIVEN TEST CASES*********************************************
+	
+	//----------Test para países que no requieren el State/Province (Projection) (Data Driven)------------
+	
+	@DataProvider
+	public Iterator<Object[]> getData()
+	{
+		ArrayList<Object[]> testData = DataDrivenTest.dataReader();
+		return testData.iterator();
+	}
+	
+	@Test(dataProvider="getData")
+	public void dataDrivenMinAssigneeInfoNoStateProjection(String scenario, String homeCountry, String hostCountry, Double salary, String beginDate, String endDate, String policy)
+	{
+		PageDemographic pageDemo = new PageDemographic(driver);
+		DataDrivenTest.dataReader();
+		pageDemo.minAssigneeInformationNoState(scenario, homeCountry, hostCountry, salary, beginDate, endDate);
+		pageDemo.demographicNext();
+		PagePayPolicyMinView pagePay = new PagePayPolicyMinView(driver);
+		pagePay.selectPayPolicy(policy);
+		pagePay.projectionClick();
+		PageCompensation pageComp = new PageCompensation(driver);
+		pageComp.calculateProjection();
 		PageReport pageRep = new PageReport(driver);
 		pageRep.printClick();
 	}

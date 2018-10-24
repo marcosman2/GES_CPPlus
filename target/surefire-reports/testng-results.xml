@@ -1,133 +1,258 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="10" passed="10">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Test.Tests" duration-ms="605602" started-at="2018-10-22T18:42:23Z" finished-at="2018-10-22T18:52:29Z">
+  <suite name="Command line suite" duration-ms="509474" started-at="2018-10-24T20:36:53Z" finished-at="2018-10-24T20:45:22Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="605602" started-at="2018-10-22T18:42:23Z" finished-at="2018-10-22T18:52:29Z">
+    <test name="Command line test" duration-ms="509474" started-at="2018-10-24T20:36:53Z" finished-at="2018-10-24T20:45:22Z">
       <class name="Test.Tests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.Tests@7a5d012c]" name="setUp" is-config="true" duration-ms="12526" started-at="2018-10-22T18:42:24Z" finished-at="2018-10-22T18:42:36Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.Tests@4e04a765]" name="setUp" is-config="true" duration-ms="16316" started-at="2018-10-24T20:36:56Z" finished-at="2018-10-24T20:37:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="maxAssigneeInfoNoStateProjeection()[pri:0, instance:Test.Tests@7a5d012c]" name="maxAssigneeInfoNoStateProjeection" duration-ms="85512" started-at="2018-10-22T18:42:36Z" finished-at="2018-10-22T18:44:02Z">
+        <test-method status="PASS" signature="dataDrivenMinAssigneeInfoNoStateProjection(java.lang.String, java.lang.String, java.lang.String, java.lang.Double, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Test.Tests@4e04a765]" name="dataDrivenMinAssigneeInfoNoStateProjection" duration-ms="110841" started-at="2018-10-24T20:37:13Z" data-provider="getData" finished-at="2018-10-24T20:39:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Excel]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Australia]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Argentina]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[45000.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1/01/18]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12/31/2018]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[CP Plus PPT]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- maxAssigneeInfoNoStateProjeection -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.Tests@7a5d012c]" name="tearDown" is-config="true" duration-ms="597" started-at="2018-10-22T18:44:02Z" finished-at="2018-10-22T18:44:02Z">
+        </test-method> <!-- dataDrivenMinAssigneeInfoNoStateProjection -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.Tests@4e04a765]" name="tearDown" is-config="true" duration-ms="1378" started-at="2018-10-24T20:39:04Z" finished-at="2018-10-24T20:39:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.Tests@7a5d012c]" name="setUp" is-config="true" duration-ms="11873" started-at="2018-10-22T18:44:02Z" finished-at="2018-10-22T18:44:14Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.Tests@4e04a765]" name="setUp" is-config="true" duration-ms="12884" started-at="2018-10-24T20:39:05Z" finished-at="2018-10-24T20:39:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="maxAssigneeInfoNoStateWorksheet()[pri:0, instance:Test.Tests@7a5d012c]" name="maxAssigneeInfoNoStateWorksheet" duration-ms="42175" started-at="2018-10-22T18:44:14Z" finished-at="2018-10-22T18:44:56Z">
+        <test-method status="PASS" signature="dataDrivenMinAssigneeInfoNoStateProjection(java.lang.String, java.lang.String, java.lang.String, java.lang.Double, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Test.Tests@4e04a765]" name="dataDrivenMinAssigneeInfoNoStateProjection" duration-ms="58381" started-at="2018-10-24T20:39:18Z" data-provider="getData" finished-at="2018-10-24T20:40:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Excel 2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Brazil]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Argentina]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[78000.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1/01/18]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12/31/2018]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[CP Plus PPT]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- maxAssigneeInfoNoStateWorksheet -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.Tests@7a5d012c]" name="tearDown" is-config="true" duration-ms="3265" started-at="2018-10-22T18:44:56Z" finished-at="2018-10-22T18:44:59Z">
+        </test-method> <!-- dataDrivenMinAssigneeInfoNoStateProjection -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.Tests@4e04a765]" name="tearDown" is-config="true" duration-ms="1618" started-at="2018-10-24T20:40:16Z" finished-at="2018-10-24T20:40:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.Tests@7a5d012c]" name="setUp" is-config="true" duration-ms="13681" started-at="2018-10-22T18:44:59Z" finished-at="2018-10-22T18:45:13Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.Tests@4e04a765]" name="setUp" is-config="true" duration-ms="16753" started-at="2018-10-24T20:40:18Z" finished-at="2018-10-24T20:40:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="maxAssigneeInfoStateProjection()[pri:0, instance:Test.Tests@7a5d012c]" name="maxAssigneeInfoStateProjection" duration-ms="36499" started-at="2018-10-22T18:45:13Z" finished-at="2018-10-22T18:45:50Z">
+        <test-method status="PASS" signature="dataDrivenMinAssigneeInfoNoStateProjection(java.lang.String, java.lang.String, java.lang.String, java.lang.Double, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Test.Tests@4e04a765]" name="dataDrivenMinAssigneeInfoNoStateProjection" duration-ms="112037" started-at="2018-10-24T20:40:35Z" data-provider="getData" finished-at="2018-10-24T20:42:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Excel 3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Australia]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Colombia]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[90000.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1/01/18]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12/31/2018]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[CP Plus PPT]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- maxAssigneeInfoStateProjection -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.Tests@7a5d012c]" name="tearDown" is-config="true" duration-ms="891" started-at="2018-10-22T18:45:50Z" finished-at="2018-10-22T18:45:51Z">
+        </test-method> <!-- dataDrivenMinAssigneeInfoNoStateProjection -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.Tests@4e04a765]" name="tearDown" is-config="true" duration-ms="999" started-at="2018-10-24T20:42:27Z" finished-at="2018-10-24T20:42:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.Tests@7a5d012c]" name="setUp" is-config="true" duration-ms="11100" started-at="2018-10-22T18:45:51Z" finished-at="2018-10-22T18:46:02Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.Tests@4e04a765]" name="setUp" is-config="true" duration-ms="14755" started-at="2018-10-24T20:42:28Z" finished-at="2018-10-24T20:42:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="maxAssigneeInfoStateWorksheet()[pri:0, instance:Test.Tests@7a5d012c]" name="maxAssigneeInfoStateWorksheet" duration-ms="36436" started-at="2018-10-22T18:46:02Z" finished-at="2018-10-22T18:46:38Z">
+        <test-method status="PASS" signature="dataDrivenMinAssigneeInfoNoStateProjection(java.lang.String, java.lang.String, java.lang.String, java.lang.Double, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Test.Tests@4e04a765]" name="dataDrivenMinAssigneeInfoNoStateProjection" duration-ms="50695" started-at="2018-10-24T20:42:42Z" data-provider="getData" finished-at="2018-10-24T20:43:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Excel 4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Austria]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Argentina]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[55000.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1/01/18]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12/31/2018]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[CP Plus PPT]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- maxAssigneeInfoStateWorksheet -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.Tests@7a5d012c]" name="tearDown" is-config="true" duration-ms="528" started-at="2018-10-22T18:46:38Z" finished-at="2018-10-22T18:46:39Z">
+        </test-method> <!-- dataDrivenMinAssigneeInfoNoStateProjection -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.Tests@4e04a765]" name="tearDown" is-config="true" duration-ms="638" started-at="2018-10-24T20:43:33Z" finished-at="2018-10-24T20:43:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.Tests@7a5d012c]" name="setUp" is-config="true" duration-ms="13240" started-at="2018-10-22T18:46:39Z" finished-at="2018-10-22T18:46:52Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.Tests@4e04a765]" name="setUp" is-config="true" duration-ms="13336" started-at="2018-10-24T20:43:34Z" finished-at="2018-10-24T20:43:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="minAssigneeInfoDependentProjection()[pri:0, instance:Test.Tests@7a5d012c]" name="minAssigneeInfoDependentProjection" duration-ms="29418" started-at="2018-10-22T18:46:52Z" finished-at="2018-10-22T18:47:21Z">
+        <test-method status="PASS" signature="dataDrivenMinAssigneeInfoNoStateProjection(java.lang.String, java.lang.String, java.lang.String, java.lang.Double, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Test.Tests@4e04a765]" name="dataDrivenMinAssigneeInfoNoStateProjection" duration-ms="94606" started-at="2018-10-24T20:43:47Z" data-provider="getData" finished-at="2018-10-24T20:45:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Excel 5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Australia]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Chile]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[66500.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1/01/18]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12/31/2018]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[CP Plus PPT]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- minAssigneeInfoDependentProjection -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.Tests@7a5d012c]" name="tearDown" is-config="true" duration-ms="2186" started-at="2018-10-22T18:47:21Z" finished-at="2018-10-22T18:47:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.Tests@7a5d012c]" name="setUp" is-config="true" duration-ms="10787" started-at="2018-10-22T18:47:23Z" finished-at="2018-10-22T18:47:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="minAssigneeInfoDependentWorksheet()[pri:0, instance:Test.Tests@7a5d012c]" name="minAssigneeInfoDependentWorksheet" duration-ms="58565" started-at="2018-10-22T18:47:34Z" finished-at="2018-10-22T18:48:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- minAssigneeInfoDependentWorksheet -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.Tests@7a5d012c]" name="tearDown" is-config="true" duration-ms="2281" started-at="2018-10-22T18:48:33Z" finished-at="2018-10-22T18:48:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.Tests@7a5d012c]" name="setUp" is-config="true" duration-ms="15218" started-at="2018-10-22T18:48:35Z" finished-at="2018-10-22T18:48:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="minAssigneeInfoNoStateProjection()[pri:0, instance:Test.Tests@7a5d012c]" name="minAssigneeInfoNoStateProjection" duration-ms="82226" started-at="2018-10-22T18:48:50Z" finished-at="2018-10-22T18:50:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- minAssigneeInfoNoStateProjection -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.Tests@7a5d012c]" name="tearDown" is-config="true" duration-ms="2202" started-at="2018-10-22T18:50:13Z" finished-at="2018-10-22T18:50:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.Tests@7a5d012c]" name="setUp" is-config="true" duration-ms="10794" started-at="2018-10-22T18:50:15Z" finished-at="2018-10-22T18:50:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="minAssigneeInfoNoStateWorksheet()[pri:0, instance:Test.Tests@7a5d012c]" name="minAssigneeInfoNoStateWorksheet" duration-ms="29446" started-at="2018-10-22T18:50:26Z" finished-at="2018-10-22T18:50:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- minAssigneeInfoNoStateWorksheet -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.Tests@7a5d012c]" name="tearDown" is-config="true" duration-ms="682" started-at="2018-10-22T18:50:55Z" finished-at="2018-10-22T18:50:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.Tests@7a5d012c]" name="setUp" is-config="true" duration-ms="10464" started-at="2018-10-22T18:50:56Z" finished-at="2018-10-22T18:51:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="minAssigneeInfoStateProjection()[pri:0, instance:Test.Tests@7a5d012c]" name="minAssigneeInfoStateProjection" duration-ms="27079" started-at="2018-10-22T18:51:06Z" finished-at="2018-10-22T18:51:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- minAssigneeInfoStateProjection -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.Tests@7a5d012c]" name="tearDown" is-config="true" duration-ms="2107" started-at="2018-10-22T18:51:33Z" finished-at="2018-10-22T18:51:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Test.Tests@7a5d012c]" name="setUp" is-config="true" duration-ms="11666" started-at="2018-10-22T18:51:35Z" finished-at="2018-10-22T18:51:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="minAssigneeInfoStateWorksheet()[pri:0, instance:Test.Tests@7a5d012c]" name="minAssigneeInfoStateWorksheet" duration-ms="38396" started-at="2018-10-22T18:51:47Z" finished-at="2018-10-22T18:52:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- minAssigneeInfoStateWorksheet -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.Tests@7a5d012c]" name="tearDown" is-config="true" duration-ms="3636" started-at="2018-10-22T18:52:25Z" finished-at="2018-10-22T18:52:29Z">
+        </test-method> <!-- dataDrivenMinAssigneeInfoNoStateProjection -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test.Tests@4e04a765]" name="tearDown" is-config="true" duration-ms="761" started-at="2018-10-24T20:45:22Z" finished-at="2018-10-24T20:45:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Test.Tests -->
     </test> <!-- Command line test -->
-  </suite> <!-- Test.Tests -->
+  </suite> <!-- Command line suite -->
 </testng-results>

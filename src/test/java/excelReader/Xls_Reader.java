@@ -2,7 +2,9 @@ package excelReader;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
+import org.apache.poi.hssf.usermodel.HSSFCreationHelper;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
+import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -20,7 +22,7 @@ import java.io.IOException;
 import java.util.Calendar;
 
 public class Xls_Reader {
-    //public static String filename = "src/config/testcases/TestData.xlsx";
+    public static String filename = "src/config/testcases/TestData.xlsx";
     public  String path;
     public  FileInputStream fis = null;
     public  FileOutputStream fileOut =null;
@@ -85,9 +87,9 @@ public class Xls_Reader {
             if(cell==null)
                 return "";
             //System.out.println(cell.getCellType());
-            if(cell.getCellType()== 1)
+            if(cell.getCellType()== CellType.STRING)
                 return cell.getStringCellValue();
-            else if(cell.getCellType()== 0 || cell.getCellType()== 2 ){
+            else if(cell.getCellType()== CellType.NUMERIC || cell.getCellType()== CellType.FORMULA ){
 
                 String cellText  = String.valueOf(cell.getNumericCellValue());
                 if (HSSFDateUtil.isCellDateFormatted(cell)) {
@@ -109,7 +111,7 @@ public class Xls_Reader {
 
 
                 return cellText;
-            }else if(cell.getCellType()== 3)
+            }else if(cell.getCellType()== CellType.BLANK)
                 return "";
             else
                 return String.valueOf(cell.getBooleanCellValue());
@@ -142,9 +144,9 @@ public class Xls_Reader {
             if(cell==null)
                 return "";
 
-            if(cell.getCellType()== 1)
+            if(cell.getCellType()== CellType.STRING)
                 return cell.getStringCellValue();
-            else if(cell.getCellType()== 0 || cell.getCellType()== 2 ){
+            else if(cell.getCellType()== CellType.NUMERIC || cell.getCellType()== CellType.FORMULA ){
 
                 String cellText  = String.valueOf(cell.getNumericCellValue());
                 if (HSSFDateUtil.isCellDateFormatted(cell)) {
@@ -166,7 +168,7 @@ public class Xls_Reader {
 
 
                 return cellText;
-            }else if(cell.getCellType()== 3)
+            }else if(cell.getCellType()== CellType.BLANK)
                 return "";
             else
                 return String.valueOf(cell.getBooleanCellValue());
@@ -283,9 +285,9 @@ public class Xls_Reader {
             hlink_style.setFont(hlink_font);
             //hlink_style.setWrapText(true);
 
-            Hyperlink link = createHelper.createHyperlink(3);
-            link.setAddress(url);
-            cell.setHyperlink(link);
+            //Hyperlink link = createHelper.createHyperlink(XSSFHyperlink.LINK_FILE);
+            //link.setAddress(url);
+            //cell.setHyperlink(link);
             cell.setCellStyle(hlink_style);
 
             fileOut = new FileOutputStream(path);

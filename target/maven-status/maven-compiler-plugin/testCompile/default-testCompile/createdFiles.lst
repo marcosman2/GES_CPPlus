@@ -1,0 +1,7 @@
+Test\Tests.class
+PageObject\PageCompensation.class
+PageObject\PageLogin.class
+PageObject\PagePayPolicyMinView.class
+PageObject\PageDemographicMaxView.class
+PageObject\PageDemographic.class
+PageObject\PageReport.class
