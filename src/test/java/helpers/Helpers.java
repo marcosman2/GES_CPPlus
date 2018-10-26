@@ -44,5 +44,13 @@ public class Helpers {
 		}
 		return true;
 	}
+	
+	public boolean enabledElement(String id)
+	{
+		if(driver.findElement(By.id(id)).isEnabled())
+			return true;
+		else
+			return false;
+	}
 
 }

@@ -5,11 +5,29 @@
     <classes>
       <class name="Test.Tests">
         <methods>
+          <include name="maxAssigneeInfoStateProjection"/>
+          <include name="maxAssigneeInfoStateWorksheet"/>
+          <include name="minAssigneeInfoNoStateProjection"/>
+          <include name="minAssigneeInfoStateWorksheet"/>
+          <include name="minAssigneeInfoDependentWorksheet"/>
+          <include name="maxAssigneeInfoNoStateWorksheet"/>
+          <include name="minAssigneeInfoNoStateWorksheet"/>
+          <include name="maxAssigneeInfoNoStateProjeection"/>
           <include name="tearDown"/>
-          <include name="dataDrivenMinAssigneeInfoNoStateProjection" invocation-numbers="0"/>
+          <include name="minAssigneeInfoStateProjection"/>
           <include name="setUp"/>
+          <include name="minAssigneeInfoDependentProjection"/>
         </methods>
       </class> <!-- Test.Tests -->
+      <class name="Test.TestsDataDriven">
+        <methods>
+          <include name="tearDown"/>
+          <include name="dataDrivenminAssigneeInfoStateProjection"/>
+          <include name="setUp"/>
+          <include name="dataDrivenMinAssigneeInfoNoStateProjection" invocation-numbers="1"/>
+          <include name="minAssigneeInfoDependentProjection"/>
+        </methods>
+      </class> <!-- Test.TestsDataDriven -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->

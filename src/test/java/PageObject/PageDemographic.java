@@ -1,5 +1,7 @@
 package PageObject;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -8,6 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import helpers.Helpers;
 
 public class PageDemographic {
 	
@@ -64,19 +68,36 @@ public class PageDemographic {
 	
 	public void minAssigneeInformationNoState(String scenario, String homeCntry, String hostCntry, double salary, String beginDate, String endDate)
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 120);
-		WebElement homeCountry = wait.until(ExpectedConditions.elementToBeClickable(homeCountryDrop));
-		driver.findElement(scenarioField).sendKeys(scenario);
-		homeCountry.sendKeys(homeCntry);
-		driver.findElement(homeCountrySelection).click();
-		
-		driver.findElement(salaryField).sendKeys(String.valueOf(salary));
-		
-		driver.findElement(hostCountryDrop).sendKeys(hostCntry);
-		driver.findElement(hostCountrySelection).click();	
-		
-		driver.findElement(beginDateCalendar).sendKeys(beginDate);
-		driver.findElement(endDateCalendar).sendKeys(endDate);
+		try
+		{
+			WebDriverWait wait = new WebDriverWait(driver, 60);
+			WebElement homeCountry = wait.until(ExpectedConditions.elementToBeClickable(homeCountryDrop));
+			driver.findElement(scenarioField).sendKeys(scenario);
+			homeCountry.sendKeys(homeCntry);
+			driver.findElement(homeCountrySelection).click();
+			
+			driver.findElement(salaryField).sendKeys(String.valueOf(salary));
+			
+			driver.findElement(hostCountryDrop).sendKeys(hostCntry);
+			driver.findElement(hostCountrySelection).click();	
+			
+			driver.findElement(beginDateCalendar).sendKeys(beginDate);
+			driver.findElement(endDateCalendar).sendKeys(endDate);
+		}
+		catch(Exception e)
+		{	
+			Helpers enabled = new Helpers(driver);
+			enabled.screenshotcapture("ISSUE_Home Country Field Disabled_");
+			try
+			{
+				Thread.sleep(5000);
+			}
+			catch (InterruptedException ex)
+			{
+				ex.printStackTrace();
+			}
+			driver.close();			
+		}		
 	}
 	
 	
@@ -97,7 +118,7 @@ public class PageDemographic {
 	
 	//-----------------------Método para adicionar dependent y esposa------------------------------------
 	
-	public void minAssigneeInformationDependents(int dependents)
+	public void minAssigneeInformationDependents(Double dependents)
 	{
 		driver.findElement(dependentsField).sendKeys(String.valueOf(dependents));
 		driver.findElement(spouseCheck).click();		
@@ -105,7 +126,7 @@ public class PageDemographic {
 	
 	//Método para hacer clic en Next
 	
-	public void demographicNext ()
+	public void demographicNext()
 	{
 		driver.findElement(nextButton).click();
 	}

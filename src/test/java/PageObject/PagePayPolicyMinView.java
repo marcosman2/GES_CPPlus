@@ -33,29 +33,78 @@ public class PagePayPolicyMinView {
 	
 	public void selectPayPolicy (String payPolicy)
 	{		
-		WebDriverWait wait = new WebDriverWait(driver, 120);
-		WebElement policy = wait.until(ExpectedConditions.elementToBeClickable(payPolicyDrop));
-		policy.sendKeys(payPolicy);
-		driver.findElement(PayPolicySelection).click();		
+		try
+		{
+			WebDriverWait wait = new WebDriverWait(driver, 60);
+			WebElement policy = wait.until(ExpectedConditions.elementToBeClickable(payPolicyDrop));
+			policy.sendKeys(payPolicy);
+			driver.findElement(PayPolicySelection).click();
+		}
+		catch(Exception e)
+		{
+			Helpers enabled = new Helpers(driver);
+			enabled.screenshotcapture("ISSUE_Pay Policy Field Disabled_");
+			try
+			{
+				Thread.sleep(5000);
+			}
+			catch (InterruptedException ex)
+			{
+				ex.printStackTrace();
+			}
+			driver.close();
+		}
 	}
 	
 	//-------------------Método para hacer clic en Projection-----------------------------------------
 	
 	public void projectionClick()
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 120);
-		WebElement projection = wait.until(ExpectedConditions.elementToBeClickable(homeActualTemplateDrop));
-		projection.findElement(projectionButton).click();		
+		try
+		{
+			WebDriverWait wait = new WebDriverWait(driver, 60);
+			WebElement projection = wait.until(ExpectedConditions.elementToBeClickable(homeActualTemplateDrop));
+			projection.findElement(projectionButton).click();
+		}
+		catch(Exception e)
+		{
+			Helpers enabled = new Helpers(driver);
+			enabled.screenshotcapture("ISSUE_Pay Policy Issue_");
+			try
+			{
+				Thread.sleep(5000);
+			}
+			catch (InterruptedException ex)
+			{
+				ex.printStackTrace();
+			}
+			driver.close();
+		}		
 	}
 	
 	//-------------------Método para hacer clic en Worksheet-----------------------------------------
 	
 	public void worksheetClick()
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		try
+		{
+		WebDriverWait wait = new WebDriverWait(driver, 60);
 		WebElement worksheet = wait.until(ExpectedConditions.elementToBeClickable(homeActualTemplateDrop));
 		worksheet.findElement(worksheetButton).click();		
-	}
-	
-	
+		}
+		catch(Exception e)
+		{
+			Helpers enabled = new Helpers(driver);
+			enabled.screenshotcapture("ISSUE_Pay Policy Issue_");
+			try
+			{
+				Thread.sleep(5000);
+			}
+			catch (InterruptedException ex)
+			{
+				ex.printStackTrace();
+			}
+			driver.close();
+		}
+	}	
 }

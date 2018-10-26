@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Test.TestsDataDriven]">
+  <test thread-count="5" verbose="0" name="Command line test(failed)">
+    <classes>
+      <class name="Test.TestsDataDriven">
+        <methods>
+          <include name="tearDown"/>
+          <include name="dataDrivenminAssigneeInfoStateProjection"/>
+          <include name="setUp"/>
+          <include name="dataDrivenMinAssigneeInfoNoStateProjection" invocation-numbers="0"/>
+          <include name="minAssigneeInfoDependentProjection"/>
+        </methods>
+      </class> <!-- Test.TestsDataDriven -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Test.TestsDataDriven] -->

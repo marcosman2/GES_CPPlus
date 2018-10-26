@@ -22,14 +22,37 @@ public class PageReport {
 	}
 	
 	
-	//Método para hacer clic en el botón Print de la página Report
+	//-------------Método para hacer clic en el botón Print de la página Report-----------------------
 	
 	public void printClick()
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 180);
-		WebElement print = wait.until(ExpectedConditions.presenceOfElementLocated(reportTitle));
-		print.findElement(printButton).click();
-		Helpers capture = new Helpers(driver);
-		capture.screenshotcapture("PRINT_");
+		try
+		{
+			WebDriverWait wait = new WebDriverWait(driver, 180);
+			WebElement print = wait.until(ExpectedConditions.presenceOfElementLocated(reportTitle));
+			print.findElement(printButton).click();
+			try
+			{
+				Thread.sleep(5000);
+			}
+			catch (InterruptedException ex)
+			{
+				ex.printStackTrace();
+			}
+		}
+		catch(Exception e)
+		{
+			Helpers capture = new Helpers(driver);
+			capture.screenshotcapture("ISSUE_Report Tab Not Uploaded_");
+			try
+			{
+				Thread.sleep(5000);
+			}
+			catch (InterruptedException ex)
+			{
+				ex.printStackTrace();
+			}
+			driver.close();
+		}
 	}
 }

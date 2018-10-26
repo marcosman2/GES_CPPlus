@@ -46,7 +46,15 @@ public class PageCompensation {
 		else
 		{
 			Helpers capture = new Helpers(driver);
-			capture.screenshotcapture("ISSUE_");
+			capture.screenshotcapture("ISSUE_Compensation Tab Not Uploaded_");
+			try
+			{
+				Thread.sleep(5000);
+			}
+			catch (InterruptedException ex)
+			{
+				ex.printStackTrace();
+			}
 			driver.close();
 		}			
 	}
@@ -65,7 +73,15 @@ public class PageCompensation {
 		else
 		{
 			Helpers capture = new Helpers(driver);
-			capture.screenshotcapture("ISSUE");
+			capture.screenshotcapture("ISSUECompensation Tab Not Uploaded_");
+			try
+			{
+				Thread.sleep(5000);
+			}
+			catch (InterruptedException ex)
+			{
+				ex.printStackTrace();
+			}
 			driver.close();
 		}
 					

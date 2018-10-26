@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import helpers.Helpers;
+
 public class PageDemographicMaxView {
 	
 	private WebDriver driver;
@@ -74,41 +76,60 @@ public class PageDemographicMaxView {
 	
 	public void maxAssigneeInformationNoState(String scenario, String doB, String firstName, String surname, String homeCntry, double salary, int dependents, String hostCntry, String beginDate, String endDate)
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 120);
-		WebElement homeCountry = wait.until(ExpectedConditions.elementToBeClickable(homeCountryDrop));
-		driver.findElement(maxViewButton).click();
-		driver.findElement(scenarioField).sendKeys(scenario);
-		driver.findElement(dobCalendar).clear();
-		driver.findElement(dobCalendar).sendKeys(doB);
-		driver.findElement(firstNameField).clear();
-		driver.findElement(firstNameField).sendKeys(firstName);
-		driver.findElement(surnameField).clear();
-		driver.findElement(surnameField).sendKeys(surname);
-		homeCountry.sendKeys(homeCntry);
-		driver.findElement(homeCountrySelection).click();
-		driver.findElement(salaryField).sendKeys(String.valueOf(salary));
-		driver.findElement(dependentsField).sendKeys(String.valueOf(dependents));
-		driver.findElement(spouseCheck).click();
-		driver.findElement(hostCountryDrop).sendKeys(hostCntry);
-		driver.findElement(hostCountrySelection).click();	
-		driver.findElement(beginDateCalendar).sendKeys(beginDate);
-		driver.findElement(endDateCalendar).sendKeys(endDate);		
-		driver.findElement(nextButton).click();		
+		try
+		{
+		
+			WebDriverWait wait = new WebDriverWait(driver, 120);
+			WebElement homeCountry = wait.until(ExpectedConditions.elementToBeClickable(homeCountryDrop));
+			driver.findElement(maxViewButton).click();
+			driver.findElement(scenarioField).sendKeys(scenario);
+			driver.findElement(dobCalendar).clear();
+			driver.findElement(dobCalendar).sendKeys(doB);
+			driver.findElement(firstNameField).clear();
+			driver.findElement(firstNameField).sendKeys(firstName);
+			driver.findElement(surnameField).clear();
+			driver.findElement(surnameField).sendKeys(surname);
+			homeCountry.sendKeys(homeCntry);
+			driver.findElement(homeCountrySelection).click();
+			driver.findElement(salaryField).sendKeys(String.valueOf(salary));
+			driver.findElement(dependentsField).sendKeys(String.valueOf(dependents));
+			driver.findElement(spouseCheck).click();
+			driver.findElement(hostCountryDrop).sendKeys(hostCntry);
+			driver.findElement(hostCountrySelection).click();	
+			driver.findElement(beginDateCalendar).sendKeys(beginDate);
+			driver.findElement(endDateCalendar).sendKeys(endDate);		
+			driver.findElement(nextButton).click();
+		}
+		catch(Exception e)
+		{
+			Helpers enabled = new Helpers(driver);
+			enabled.screenshotcapture("ISSUE_Home Country Field Disabled_");
+			try
+			{
+				Thread.sleep(5000);
+			}
+			catch (InterruptedException ex)
+			{
+				ex.printStackTrace();
+			}
+			driver.close();			
+		}
 	}
 	
 	//Método para llenar los datos máximos en Assignee Demographic (País requiere State/Province)
 	
 	public void maxAssigneeInformationState(String homeState, String hostState)
 	{
-		WebDriverWait waitHomeState = new WebDriverWait(driver, 120);
-		WebElement homeSt = waitHomeState.until(ExpectedConditions.elementToBeClickable(homeStateDrop));
-		homeSt.sendKeys(homeState);
-		driver.findElement(homeStateSelection).click();
-		WebDriverWait waitHostState = new WebDriverWait(driver, 120);
-		WebElement hostSt = waitHostState.until(ExpectedConditions.elementToBeClickable(hostStateDrop));
-		hostSt.sendKeys(hostState);
-		driver.findElement(hostStateSelection).click();
-		driver.findElement(nextButton).click();
+		
+			WebDriverWait waitHomeState = new WebDriverWait(driver, 120);
+			WebElement homeSt = waitHomeState.until(ExpectedConditions.elementToBeClickable(homeStateDrop));
+			homeSt.sendKeys(homeState);
+			driver.findElement(homeStateSelection).click();
+			WebDriverWait waitHostState = new WebDriverWait(driver, 120);
+			WebElement hostSt = waitHostState.until(ExpectedConditions.elementToBeClickable(hostStateDrop));
+			hostSt.sendKeys(hostState);
+			driver.findElement(hostStateSelection).click();
+			driver.findElement(nextButton).click();
 		
 	}
 
