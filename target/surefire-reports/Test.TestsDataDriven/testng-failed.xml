@@ -6,10 +6,8 @@
       <class name="Test.TestsDataDriven">
         <methods>
           <include name="tearDown"/>
-          <include name="dataDrivenminAssigneeInfoStateProjection"/>
           <include name="setUp"/>
-          <include name="dataDrivenMinAssigneeInfoNoStateProjection" invocation-numbers="0"/>
-          <include name="minAssigneeInfoDependentProjection"/>
+          <include name="dataDrivenMinAssigneeInfoNoStateProjection"/>
         </methods>
       </class> <!-- Test.TestsDataDriven -->
     </classes>

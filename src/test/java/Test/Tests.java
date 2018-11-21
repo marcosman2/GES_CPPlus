@@ -47,10 +47,10 @@ public class Tests {
 	public void minAssigneeInfoNoStateProjection()
 	{
 		PageDemographic pageDemo = new PageDemographic(driver);
-		pageDemo.minAssigneeInformationNoState("Test 1", "Argentina", "Australia", 78000, "01/01/2018", "12/31/2018");
+		pageDemo.minAssigneeInformationNoState("Test 1", "Argentina", "Australia", 78000, "01/01/2018", "12/30/2018");
 		PagePayPolicyMinView pagePay = new PagePayPolicyMinView(driver);
 		pageDemo.demographicNext();
-		pagePay.selectPayPolicy("CP Plus PPT");
+		pagePay.selectPayPolicy("PPT 110618");
 		pagePay.projectionClick();
 		PageCompensation pageComp = new PageCompensation(driver);
 		pageComp.calculateProjection();
@@ -64,10 +64,10 @@ public class Tests {
 		public void minAssigneeInfoNoStateWorksheet()
 		{
 			PageDemographic pageDemo = new PageDemographic(driver);
-			pageDemo.minAssigneeInformationNoState("Test 2", "Argentina", "Australia", 78000, "01/01/2018", "12/31/2018");
+			pageDemo.minAssigneeInformationNoState("Test 2", "Argentina", "Australia", 78000, "01/01/2018", "06/30/2019");
 			PagePayPolicyMinView pagePay = new PagePayPolicyMinView(driver);
 			pageDemo.demographicNext();
-			pagePay.selectPayPolicy("CP Plus PPT");
+			pagePay.selectPayPolicy("PPT 110618");
 			pagePay.worksheetClick();
 			PageCompensation pageComp = new PageCompensation(driver);
 			pageComp.calculateWorksheet();
@@ -150,7 +150,7 @@ public class Tests {
 	//--------Test para Assignee Max View que no requieren State/Province(Projection)--------------------
 	
 	@Test
-	public void maxAssigneeInfoNoStateProjeection()
+	public void maxAssigneeInfoNoStateProjection()
 	{
 		PageDemographicMaxView pageDemo = new PageDemographicMaxView(driver);
 		pageDemo.maxAssigneeInformationNoState("Test 7", "09/24/1983", "Marcos", "Manrique", "Argentina", 89000, 3, "Australia", "01/01/2018", "12/31/2018");
@@ -221,9 +221,9 @@ public class Tests {
 	
 	//----------------------Pasos que se ejecutan siempre al final----------------------------
 	
-	@AfterMethod
+	/*@AfterMethod
 	public void tearDown()
 	{
 		driver.quit();
-	}
+	}*/
 }

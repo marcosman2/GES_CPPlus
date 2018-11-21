@@ -5,8 +5,7 @@
     <classes>
       <class name="Test.Tests">
         <methods>
-          <include name="maxAssigneeInfoNoStateWorksheet"/>
-          <include name="tearDown"/>
+          <include name="minAssigneeInfoNoStateProjection"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- Test.Tests -->

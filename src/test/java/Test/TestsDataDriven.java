@@ -78,7 +78,7 @@ private WebDriver driver;
 		}
 		
 		@Test(dataProvider="getDataMinInfoState")
-		public void dataDrivenminAssigneeInfoStateProjection(String scenario, String homeCountry, String hostCountry, Double salary, String beginDate, String endDate, String homeState, String hostState, String policy)
+		public void dataDrivenMinAssigneeInfoStateProjection(String scenario, String homeCountry, String hostCountry, Double salary, String beginDate, String endDate, String homeState, String hostState, String policy)
 		{
 			PageDemographic pageDemo = new PageDemographic(driver);
 			DataDrivenTest.dataReaderMinInfoState();

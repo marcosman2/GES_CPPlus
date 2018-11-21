@@ -36,7 +36,7 @@ public class PageCompensation {
 	
 	public void calculateProjection()
 	{
-		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(180, TimeUnit.SECONDS);
 		Helpers exists = new Helpers(driver);
 		boolean existsField = exists.existsElement("//*[@id=\"aaagnostic\"]/tabset/div/tab[3]/app-projection/form/div[1]/div/label[2]");
 		if (existsField == true)
@@ -63,7 +63,7 @@ public class PageCompensation {
 	
 	public void calculateWorksheet()
 	{
-		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(180, TimeUnit.SECONDS);
 		Helpers exists = new Helpers(driver);
 		boolean existsField = exists.existsElement("//*[@id=\"aaagnostic\"]/tabset/div/tab[3]/app-worksheet/form/div/div[1]/div/label[2]");
 		if (existsField == true)
